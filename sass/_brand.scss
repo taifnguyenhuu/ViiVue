@@ -1,0 +1,119 @@
+.brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $main-color;
+
+    &-content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 70px;
+        padding: 0 20px;
+    }
+
+    &-image {
+        width: 50%;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &-heading {
+        width: 50%;;
+        font-size: 64px;
+        font-weight: 400;
+
+        & span {
+            display: block;
+        }
+    }
+
+    &-list {
+        display: flex;
+        justify-content: center;
+        padding: 0 12px;
+        margin: 0;
+        list-style-type: none;
+        gap: 0 26px;
+    }
+
+    &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $white-color;
+        flex-shrink: 0;
+        padding: 12px;
+        border: 1px solid $black-color;
+        box-shadow: 2px 2px 0 $black-color;
+        border-radius: 15px;
+
+        & img {
+            width: 160px;
+        }
+    }
+
+    &-list + &-list {
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 1023.98px) {
+    .brand {
+        height: auto;
+        padding: 60px 0;
+
+        &-content {
+            min-width: unset;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        &-heading {
+            min-width: unset;
+            width: 70%;
+            font-size: 32px;
+        }
+
+        &-image {
+            width: 30%;
+        }
+
+        &-list {
+            gap: 0 10px;
+        }
+
+        &-list1 {
+            transform: translate(-20px, 0);
+        }
+
+        &-list2 {
+            transform: translate(20px, 0);
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .brand-content {
+        flex-direction: column-reverse;
+    }
+
+    .brand-image,
+    .brand-heading {
+        width: 90%;
+    }
+
+    .brand-image {
+        margin-bottom: 32px;
+    }
+
+    .brand-item img {
+        width: 120px;
+    }
+}
+

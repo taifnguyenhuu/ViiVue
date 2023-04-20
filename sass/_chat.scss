@@ -1,0 +1,114 @@
+.chat {
+    padding: 60px 0;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        padding: 0 35px;
+    }
+
+    &-image {
+        width: 18%;
+        padding: 0 20px;
+    }
+
+    &-text {
+        flex: 1;
+
+        & p {
+            max-width: 440px;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: calc(30/20);
+        }
+    }
+
+    &-btn {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 36%;
+        font-size: 64px;
+        font-weight: 400;
+        
+        & a {
+            display: inline-block;
+            position: relative;
+            color: $black-color;
+            transition: all linear 0.2s;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                bottom: -6px;
+                left: 0;
+                height: 2px;
+                background-color: $red-color;
+                z-index: 1;
+            }
+
+            & i {
+                margin-left: 18px;
+                transition: transform linear 0.2s;
+            }
+
+            &:hover {
+                color: $red-color;
+
+                & i {
+                    transform: translateX(10px);
+                }
+            }
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 1023.98px) {
+    .chat-container {
+        flex-wrap: wrap;
+    }
+
+    .chat-image {
+        width: 50%;
+    }
+
+    .chat-text {
+        margin-right: 0;
+    }
+    
+    .chat-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .chat-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .chat-text {
+        width: 100%;
+        
+        & p {
+            font-size: 16px;
+        }
+    }
+
+    .chat-btn {
+        font-size: 40px;
+    }
+}
+
+
